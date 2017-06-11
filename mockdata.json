@@ -1,0 +1,16 @@
+{
+    "user":{
+        "id":1,
+        "name":"xwk",
+        "tx":"/static/img/1.jpg"
+    },
+    "dialogue": [
+        {
+            "id":1,
+            "tx": "/static/img/2.jpg",
+            "name":"rebot1",
+            "contentList":[{"msg":"我们来聊天吧","time":"11:00","role":"1"}],
+            "time":"19:42"
+        }
+        ]
+}

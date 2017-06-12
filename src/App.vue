@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <top-bar></top-bar>
-    
-    <router-view v-on:newDialogue='newDialogue1' :newMsg='data'></router-view>
+
+    <router-view></router-view>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
       data:[]
     }
   },
- 
+
   components:{
     topBar,
     dialogList,

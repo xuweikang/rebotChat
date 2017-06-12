@@ -11,6 +11,20 @@
             "name":"rebot1",
             "contentList":[{"msg":"我们来聊天吧","time":"11:00","role":"1"}],
             "time":"19:42"
+        },
+        {
+            "id":2,
+            "tx": "/static/img/2.jpg",
+            "name":"rebot1",
+            "contentList":[{"msg":"我们来聊天吧2","time":"11:00","role":"1"}],
+            "time":"19:42"
+        },
+        {
+            "id":3,
+            "tx": "/static/img/2.jpg",
+            "name":"rebot1",
+            "contentList":[{"msg":"我们来聊天吧3","time":"11:00","role":"1"}],
+            "time":"19:42"
         }
         ]
 }

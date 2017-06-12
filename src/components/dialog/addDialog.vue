@@ -5,25 +5,28 @@
       <img src="/static/img/回车.png" alt="" width="24" height="35" @click="send">
     </div>
   </div>
-  
+
 </template>
 <script>
 import {getDialog,getRebotContent} from '../../api/api';
-import Bus from '../../common/bus.js';
 export default {
   name: 'addDialog',
   methods:{
     send:function(){
+      var now=new Date();
+      var hh=now.getHours();
+      var mm=now.getMinutes();
+      var h_m=hh+':'+mm;
+      let userNew={"msg":document.getElementById('robot').value,"role":"2","time":h_m};
+      this.$store.commit('updateDialog',{newMsg:userNew,id:this.$route.params.id});
       getRebotContent({'key':'9857cf36b0bc4a48b8ba3f976e43a4cf','userid':'1234','info':document.getElementById('robot').value}).then((res) => {
-             // console.log(res.data.text); 
-              setTimeout(function(){
-                 Bus.$emit('rebotCallData', res.data.text);
-              },500);
-             
-             Bus.$emit('userData', document.getElementById('robot').value);
+             let rebotNew={"msg":res.data.text,"role":"1","time":h_m};
+             this.$store.commit('updateDialog',{newMsg:rebotNew,id:this.$route.params.id});
              document.getElementById('robot').value='';
+             setTimeout(function(){
+               document.getElementsByTagName('body')[0].scrollTop=document.getElementsByTagName('body')[0].offsetHeight+500;
+             },100)
         })
-      
 
     }
   }

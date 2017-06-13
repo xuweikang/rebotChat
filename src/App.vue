@@ -9,8 +9,6 @@
 <script>
 //加载需要使用的组件
 import topBar from './components/topBar/topBar'
-import dialogList from './components/dialogList/dialogList'
-import dialog from './components/dialog/dialog'
 import Vue from 'vue';
 
 
@@ -26,9 +24,7 @@ export default {
   },
 
   components:{
-    topBar,
-    dialogList,
-    dialog,
+    topBar
   },
   methods:{
     newDialogue1:function(data){
@@ -41,6 +37,6 @@ export default {
 
 <style>
 #app {
-
+  
 }
 </style>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
-import dialog from '../components/dialog/dialog'
+import dialog from '../components/dialog/dialogDetail'
 import dialogList from '../components/dialogList/dialogList'
 Vue.use(Router)
 
@@ -13,8 +13,8 @@ export default new Router({
       component: dialogList
     },
     {
-    	path:'/dialog:id',
-    	name:'dialog',
+    	path:'/djzy:id',
+    	name:'dialogA',
     	component:dialog
     }
   ]

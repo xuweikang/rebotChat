@@ -31,7 +31,7 @@ export default {
   },
   methods:{
     goDialog:function(id){
-      this.$router.push({name:'dialog', params: { id:id }});
+      this.$router.push({name:'dialogA', params: { id:id }});
       //修改topBar状态
       this.$store.commit('setNavbar');
     }

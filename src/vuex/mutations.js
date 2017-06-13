@@ -8,6 +8,7 @@ const mutations = {
       state.dialogue=res.data.data;
     });
   },
+  
   //获取用户信息
   getUserData:(state)=>{
     getUser().then((res) =>{
